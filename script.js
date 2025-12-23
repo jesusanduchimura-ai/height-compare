@@ -1,6 +1,6 @@
 const characters = [
   { name: "ネッド 173cm", img: "images/ned.png", x: 100 },
-  { name: "石原 秀人180cm", img: "images/watermark.png", x: 300 }
+  { name: "看守 173cm", img: "kansyu.png", x: 300 }
 ];
 
 const dropZone = document.getElementById("dropZone");
