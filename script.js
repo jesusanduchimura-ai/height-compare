@@ -1,49 +1,29 @@
+// ① キャラ名簿（身長はもう使わない）
 const characters = [
-  {
-    name: "加藤 稔",
-    img: "watermark.png",
-    height: 178,
-    x: 100
-  }
+  { name: "加藤 稔", img: ".png", x: 100 },
+  { name: "石原 秀人180cm", img: ".png", x: 300 }
 ];
 
+// ② HTML取得
 const dropZone = document.getElementById("dropZone");
-const BASE_HEIGHT = 160;
 
-dropZone.addEventListener("dragover", e => {
-  e.preventDefault();
-});
-
-dropZone.addEventListener("drop", e => {
-  e.preventDefault();
-  const file = e.dataTransfer.files[0];
-  if (!file) return;
-
-  const url = URL.createObjectURL(file);
-  createCharacter(url);
-});
-
-function createCharacter(imageUrl) {
+// ③ キャラを1人作る
+function createCharacter(name, imageUrl, x) {
   const wrapper = document.createElement("div");
   wrapper.className = "character";
+  wrapper.style.position = "absolute";
+  wrapper.style.left = x + "px";
 
   const img = document.createElement("img");
   img.src = imageUrl;
-  img.style.height = "300px";
   img.draggable = false;
 
-  // 身長入力
-  const input = document.createElement("input");
-  input.type = "number";
-  input.value = 160;
-  input.style.display = "block";
+  // ★ 名前表示
+  const label = document.createElement("div");
+  label.className = "name";
+  label.textContent = name;
 
-  input.addEventListener("input", () => {
-    const scale = input.value / BASE_HEIGHT;
-    wrapper.style.transform = `scale(${scale})`;
-  });
-
-  // ドラッグ移動
+  // ドラッグ移動（横だけ）
   let isDragging = false;
   let startX = 0;
   let currentLeft = 0;
@@ -57,8 +37,7 @@ function createCharacter(imageUrl) {
 
   document.addEventListener("mousemove", e => {
     if (!isDragging) return;
-    const dx = e.clientX - startX;
-    wrapper.style.left = currentLeft + dx + "px";
+    wrapper.style.left = currentLeft + (e.clientX - startX) + "px";
   });
 
   document.addEventListener("mouseup", () => {
@@ -75,8 +54,7 @@ function createCharacter(imageUrl) {
 
   document.addEventListener("touchmove", e => {
     if (!isDragging) return;
-    const dx = e.touches[0].clientX - startX;
-    wrapper.style.left = currentLeft + dx + "px";
+    wrapper.style.left = currentLeft + (e.touches[0].clientX - startX) + "px";
   });
 
   document.addEventListener("touchend", () => {
@@ -84,8 +62,11 @@ function createCharacter(imageUrl) {
   });
 
   wrapper.appendChild(img);
-  wrapper.appendChild(input);
-  wrapper.style.left = Math.random() * 400 + "px";
-
+  wrapper.appendChild(label);
   dropZone.appendChild(wrapper);
 }
+
+// ④ 最初から並べる
+characters.forEach(c => {
+  createCharacter(c.name, c.img, c.x);
+});
