@@ -9,8 +9,8 @@ body {
   position: relative;
   width: 5000px;
   height: 1029px;
-  overflow-x: auto;
-  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
   border: 1px solid #ccc;
   }
 
