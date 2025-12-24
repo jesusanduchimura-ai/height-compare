@@ -54,6 +54,11 @@ body {
   cursor: grabbing;
 }
 
+.character {
+  position: absolute;
+  bottom: 0;
+}
+
 .name {
   display: inline-block;   
   background: rgba(255, 255, 255, 0.85);
