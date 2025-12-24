@@ -20,10 +20,6 @@ body {
   text-align: left;
 }
 
-#dropZone {
-  transform: scale(0.8);         
-  transform-origin: top left;    
- }
   
 #background {
   background-image: url("images/background.png");
@@ -86,4 +82,10 @@ body {
   width: 100vw;         
   min-width: 1200px;    
   overflow-x: auto;
+}
+
+#scaleWrapper {
+  transform: scale(0.8);
+  transform-origin: top left;
+  width: fit-content;
 }
