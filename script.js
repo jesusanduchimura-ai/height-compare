@@ -74,3 +74,16 @@ function createCharacter(name, imageUrl, x) {
 characters.forEach(c => {
   createCharacter(c.name, c.img, c.x);
 });
+
+let namesVisible = true;
+
+document.getElementById("toggleNames").addEventListener("click", () => {
+  namesVisible = !namesVisible;
+
+  document.querySelectorAll(".name").forEach(name => {
+    name.style.display = namesVisible ? "inline-block" : "none";
+  });
+
+  document.getElementById("toggleNames").textContent =
+    namesVisible ? "名前を非表示" : "名前を表示";
+});
