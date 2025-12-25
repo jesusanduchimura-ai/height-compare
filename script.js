@@ -10,7 +10,7 @@ const characters = [
   { name: "看守 173cm", img: "images/kansyu_v2.png", x: 200 },
   { name: "ネッド 173cm", img: "images/ned_v2.png", x: 0 },
   { name: "シェフ 171cm", img: "images/chef.png", x: 1400 },
-  { name: "弁護士 170cm", img: "images/lawyer.png", x: 3900 },
+  { name: "弁護士 170cm", img: "images/lawyer.png", x: 2800 },
   { name: "トモ 169cm", img: "images/tomo.png", x: 1200 },
   { name: "新人ちゃん 168cm", img: "images/sinjin.png", x: 400 },
   { name: "ローランド 168cm", img: "images/roland.png", x: 730 },
