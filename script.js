@@ -22,7 +22,7 @@ const characters = [
   { name: "ドクター 161cm", img: "images/doctor_v2.png", x: 2650 },
   { name: "囚人A 159cm", img: "images/inmateA.png", x: 3970 },
   { name: "店長 153cm", img: "images/manager.png", x: 2500 },
-  { name: "囚人C 150cm", img: "images/inmateC.png", x: 4300 },
+  { name: "囚人C 150cm", img: "images/inmateC.png", x: 4250 },
   { name: "ミリィ 149cm", img: "images/milly.png", x: 2050 },
   { name: "メイプル 145cm", img: "images/maple.png", x: 3250 },
   { name: "アルク 110cm", img: "images/alc.png", x: 2200 },
