@@ -50,6 +50,7 @@ body {
   bottom: 0;
   transform-origin: bottom center;
   cursor: grab;
+  text-align: center;
 }
 
 .character img {
@@ -57,7 +58,6 @@ body {
   max-height: auto; 
   width: auto;
   display: block;
-  text-align: center;
 }
 
 .character:active {
