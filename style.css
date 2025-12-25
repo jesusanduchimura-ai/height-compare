@@ -82,5 +82,10 @@ body {
   line-height: 1.2;
   text-align: center;
   white-space: nowrap;
-  right: 50%;
 }
+
+.name {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  }
