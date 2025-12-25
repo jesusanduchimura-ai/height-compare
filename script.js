@@ -1,5 +1,6 @@
 const characters = [
   { name: "ゼン 203cm", img: "images/zen.png", x: 1000 },
+  { name: "ヘインバーグ 188cm", img: "images/heinberg.png", x: 2700 }, 
   { name: "眼帯 181cm", img: "images/eyepatch.png", x: 1800 }, 
   { name: "クロス 177cm", img: "images/cross.png", x: 900 },
   { name: "看守 173cm", img: "images/kansyu_v2.png", x: 200 },
@@ -12,11 +13,11 @@ const characters = [
   { name: "カズヤ 167cm", img: "images/kazuya.png", x: 2350 },
   { name: "チャン 167cm", img: "images/chan.png", x: 1100 },
   { name: "アンドル 163cm", img: "images/andol.png", x: 600 },
-  { name: "ドクター 161cm", img: "images/doctor.png", x: 2650 },
+  { name: "ドクター 161cm", img: "images/doctor_v2.png", x: 2650 },
   { name: "店長 153cm", img: "images/manager.png", x: 2500 },
   { name: "ミリィ 149cm", img: "images/milly.png", x: 2050 },
   { name: "アルク 110cm", img: "images/alc.png", x: 2200 },
-  { name: "ワンワン 37cm", img: "images/wanwan.png", x: 2650 }
+  { name: "ワンワン 37cm", img: "images/wanwan.png", x: 1600 }
 
 ];
 
